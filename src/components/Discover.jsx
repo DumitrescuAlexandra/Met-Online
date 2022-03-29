@@ -1,30 +1,35 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import classes from "./GetListOfArtItems.module.css";
+import classes from "./Discover.module.css";
 import ArtItem from "./ArtItem";
 
-function GetListOfArtItems() {
+function Discover() {
   const [list, setList] = useState(null);
 
   useEffect(() => {
     let mounted = true;
-    const getArtItems = () => {
+    const getHighlightItems = () => {
       if (mounted) {
         axios
           .get(
             "https://collectionapi.metmuseum.org/public/collection/v1/search?artistOrCulture=true&medium=Paintings&isHighlight=true&q=gogh"
+
+            // "https://collectionapi.metmuseum.org/public/collection/v1/objects/436530"
           )
+
           .then((response) => {
-            console.log(response.data);
-            setList(response);
+            console.log(response.data.objectIDs);
+            setList(response.data.objectIDs);
           });
       }
     };
-    getArtItems();
+    getHighlightItems();
     return function cleanup() {
       mounted = false;
     };
   }, []);
+
+  // NEED nested routes for items!
 
   return (
     <div className={classes.listPage}>
@@ -33,4 +38,4 @@ function GetListOfArtItems() {
   );
 }
 
-export default GetListOfArtItems;
+export default Discover;

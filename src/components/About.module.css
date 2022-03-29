@@ -1,0 +1,120 @@
+.aboutPage {
+  background-color: #ca965c;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.upper {
+  display: flex;
+  align-items: center;
+  margin-left: 3.5rem;
+}
+
+.sectionLeft {
+  margin-left: 10vw;
+  margin-top: 30vh;
+  position: relative;
+  width: 30vw;
+  height: 45vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.imgContainerBg {
+  position: absolute;
+  top: 2rem;
+  left: -3rem;
+  border-radius: 0.5rem;
+  background-color: #846445;
+  width: 60%;
+  height: 42.5vh;
+}
+
+.imgContainer {
+  width: 60%;
+  height: 50vh;
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.imgContainer img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.vl {
+  width: 0.25rem;
+  height: 22rem;
+  margin-left: 5vw;
+  background-color: #876445;
+}
+
+.sectionRight {
+  margin-left: 5vw;
+  width: 37.5vw;
+}
+
+.aboutTitle {
+  margin-top: 7.5rem;
+  padding-top: 3rem;
+}
+
+.aboutTitle p {
+  font-size: 3.25rem;
+}
+
+.aboutText {
+  margin-top: 2rem;
+  width: 35vw;
+}
+
+.aboutText p {
+  font-size: 1.25rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+}
+
+.aboutDiscover {
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  margin-top: 3rem;
+  font-size: 1.6rem;
+}
+
+.aboutDiscover a {
+  font-family: "Lato", sans-serif;
+  text-decoration: none;
+  color: #a35c00;
+}
+
+.aboutDiscover a:hover {
+  border-bottom: 2px solid #a35c00;
+}
+
+.copyright {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 2.5vh;
+  left: 5vw;
+}
+
+.ol {
+  position: fixed;
+  right: 5vw;
+  width: auto;
+  height: 0.125rem;
+  bottom: 5vh;
+  left: 5vw;
+  background-color: rgb(83, 46, 28);
+  opacity: 0.25;
+}
+
+.copyrightText {
+  color: #532e1c;
+}

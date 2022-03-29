@@ -1,14 +1,18 @@
 .imageContainer img {
+  position: fixed;
   width: 100vw;
   height: 100vh;
+  max-width: 100%;
+  max-height: 100%;
   overflow: hidden;
-  margin-top: -10rem;
 }
 .textBox {
-  margin-top: -18.75vh;
+  position: fixed;
+  bottom: 0;
   background-color: #0f0f0f;
   opacity: 0.95;
-  height: 20vh;
+  height: 15vh;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,14 +25,15 @@
 }
 .actualText p {
   color: #fff;
-  font-size: 3.25rem;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
   font-family: "Lato", sans-serif;
   font-weight: 200;
 }
 .actualText a {
   text-decoration: none;
-  font-size: 3.25rem;
-  font-family: "Lato", sans-serif;
+  font-size: 2.75rem;
+  letter-spacing: 1px;
   color: #f0a500;
 }
 

@@ -4,7 +4,10 @@
   opacity: 0.95;
   align-items: center;
   justify-content: space-between;
-  height: 9rem;
+  height: 7.5rem;
+  position: fixed;
+  width: 100vw;
+  z-index: 1000;
 }
 
 .logo {
@@ -16,7 +19,7 @@
 }
 
 .navLinks a {
-  margin-left: 2.5rem;
+  margin-left: 3.5rem;
   text-decoration: none;
   color: fff;
   font-family: Montaga;
@@ -24,17 +27,17 @@
 }
 
 .activeStyle {
-  border-bottom: 3px solid #f0a500;
+  border-bottom: 2.5px solid #f0a500;
   padding-bottom: 0.6rem;
   color: #f0a500;
-  font-size: 2.25rem;
+  font-size: 1.8rem;
 }
 
 .inactiveStyle {
   border-bottom: 1px solid #fff;
   padding-bottom: 0.75rem;
   color: #fff;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
 }
 
 .navLinks a:last-child {

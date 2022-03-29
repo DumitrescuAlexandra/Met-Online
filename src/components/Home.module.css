@@ -1,0 +1,45 @@
+.imageContainer img {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin-top: -10rem;
+}
+.textBox {
+  margin-top: -18.75vh;
+  background-color: #0f0f0f;
+  opacity: 0.95;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.actualText {
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.actualText p {
+  color: #fff;
+  font-size: 3.25rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 200;
+}
+.actualText a {
+  text-decoration: none;
+  font-size: 3.25rem;
+  font-family: "Lato", sans-serif;
+  color: #f0a500;
+}
+
+.actualText a:hover {
+  border-bottom: 3px solid #f0a500;
+  padding-top: 3px;
+}
+
+.actualText :nth-child(3) {
+  color: #f0a500;
+  margin-left: 0.5rem;
+  font-size: 3.5rem;
+  font-weight: 700;
+}

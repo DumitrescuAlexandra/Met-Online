@@ -1,22 +1,26 @@
+import React from "react";
+import { Route, Routes, Navigate } from "react-router-dom";
+import classes from "./App.module.css";
 import Home from "./components/Home";
 import About from "./components/About";
 import Discover from "./components/Discover";
 import NotFound from "./components/NotFound";
-import { Route, Switch, Redirect } from "react-router-dom";
 import ExploreMore from "./components/ExploreMore";
+import Navigation from "./components/Navigation";
 
 function App() {
   return (
-    <Switch>
-      <Route path="/" exact>
-        <Redirect to="/home" />
-      </Route>
-      <Route path="/home" component={<Home />} />
-      <Route path="/about" component={<About />} />
-      <Route path="/discover" component={<Discover />} />
-      <Route path="/explore" component={<ExploreMore />} />
-      <Route path="*" component={<NotFound />} />
-    </Switch>
+    <div className={classes.app}>
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<Navigate replace to="/home" />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/discover" element={<Discover />} />
+        <Route path="/explore" element={<ExploreMore />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </div>
   );
 }
 

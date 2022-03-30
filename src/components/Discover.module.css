@@ -63,27 +63,3 @@
 .discoverExplore a:hover {
   border-bottom: 2px solid #a35c00;
 }
-
-.copyright {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  bottom: 2.5vh;
-  left: 5vw;
-}
-
-.ol {
-  position: fixed;
-  right: 5vw;
-  width: auto;
-  height: 0.125rem;
-  bottom: 5vh;
-  left: 5vw;
-  background-color: rgb(83, 46, 28);
-  opacity: 0.25;
-}
-
-.copyrightText {
-  color: #532e1c;
-}

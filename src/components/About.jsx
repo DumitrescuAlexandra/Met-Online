@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import classes from "./About.module.css";
+import CopyRight from "./CopyRight";
 
 function About() {
   return (
@@ -47,12 +48,7 @@ function About() {
           </div>
         </div>
       </div>
-      <div className={classes.copyright}>
-        <div className={classes.ol}></div>
-        <div className={classes.copyrightText}>
-          © 2022, Copyright by Q_PERIOR all rights reserved{" "}
-        </div>
-      </div>
+      <CopyRight />
     </div>
   );
 }

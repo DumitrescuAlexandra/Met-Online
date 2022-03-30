@@ -3,6 +3,7 @@ import axios from "axios";
 import classes from "./Discover.module.css";
 import ArtItem from "./ArtItem";
 import { Link } from "react-router-dom";
+import CopyRight from "./CopyRight";
 
 function Discover() {
   const [list, setList] = useState(null);
@@ -49,12 +50,7 @@ function Discover() {
         Explore{" "}
         <Link to="/explore"> Vincent Van Gogh MET collection -{">"}</Link>
       </div>
-      <div className={classes.copyright}>
-        <div className={classes.ol}></div>
-        <div className={classes.copyrightText}>
-          © 2022, Copyright by Q_PERIOR all rights reserved{" "}
-        </div>
-      </div>
+      <CopyRight />
     </div>
   );
 }

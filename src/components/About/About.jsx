@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import classes from "./About.module.css";
-import CopyRight from "./CopyRight";
+import CopyRight from "../CopyRight/CopyRight";
 
 function About() {
   return (

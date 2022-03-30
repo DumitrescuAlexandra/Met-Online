@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import classes from "./NotFound.module.css";
-import Copyright from "./CopyRight";
+import Copyright from "../CopyRight/CopyRight";
 
 function NotFound() {
   return (

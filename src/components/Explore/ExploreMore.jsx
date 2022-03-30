@@ -1,5 +1,5 @@
 import React from "react";
-import CopyRight from "./CopyRight";
+import CopyRight from "../CopyRight/CopyRight";
 import classes from "./ExploreMore.module.css";
 
 function ExploreMore() {

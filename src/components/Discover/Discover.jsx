@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import classes from "./Discover.module.css";
-import ArtItem from "./ArtItem";
+import ArtItem from "../ArtItem/ArtItem";
 import { Link } from "react-router-dom";
-import CopyRight from "./CopyRight";
+import CopyRight from "../CopyRight/CopyRight";
 
 function Discover() {
   const [list, setList] = useState(null);

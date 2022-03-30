@@ -1,12 +1,12 @@
 import React from "react";
 import { Route, Routes, Navigate } from "react-router-dom";
 import classes from "./App.module.css";
-import Home from "./components/Home";
-import About from "./components/About";
-import Discover from "./components/Discover";
-import NotFound from "./components/NotFound";
-import ExploreMore from "./components/ExploreMore";
-import Navigation from "./components/Navigation";
+import Home from "./components/Home/Home";
+import About from "./components/About/About";
+import Discover from "./components/Discover/Discover";
+import NotFound from "./components/NotFound/NotFound";
+import ExploreMore from "./components/Explore/ExploreMore";
+import Navigation from "./components/Navigation/Navigation";
 
 function App() {
   return (

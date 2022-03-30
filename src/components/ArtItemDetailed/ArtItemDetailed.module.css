@@ -1,0 +1,71 @@
+/* Medium desktop: 1920 x 1080 */
+.artItemModalBck {
+  position: relative;
+  top: 10rem;
+  left: 20vw;
+  height: max(80vh);
+  width: min(60vw);
+  display: flex;
+}
+.closeImg {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.artItemPage {
+  position: absolute;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+}
+
+.artItemPic {
+  width: fit-content;
+  height: fit-content;
+}
+
+.artItemPic img {
+  position: absolute;
+  width: 80vh;
+  height: 80vh;
+}
+
+.artItemDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 100%;
+  background-color: #0f0f0f;
+}
+
+.artItemDetails p {
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.artItemDetails p {
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.artItemitle p {
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.artItemDetails span {
+  font-family: "Lato", sans-serif;
+  color: #fff;
+  font-size: 1.25rem;
+  font-style: italic;
+  font-weight: 200;
+}

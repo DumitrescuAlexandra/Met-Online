@@ -44,6 +44,9 @@ function Discover() {
       <div className={classes.discoverList}>
         <div className={classes.backArrow}>{"<"}</div>
         <ArtItem />
+        <ArtItem />
+        <ArtItem />
+        <ArtItem />
         <div className={classes.nextArrow}>{">"}</div>
       </div>
       <div className={classes.discoverExplore}>

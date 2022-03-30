@@ -1,12 +1,14 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import classes from "./Navigation.module.css";
 
 function Navigation() {
   return (
     <div className={classes.navigationBar}>
       <div className={classes.logo}>
-        <img src="/images/met-logo.svg" alt="" />
+        <Link to="/home">
+          <img src="/images/met-logo.svg" alt="" />
+        </Link>
       </div>
       <div className={classes.navLinks}>
         <NavLink

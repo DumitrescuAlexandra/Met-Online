@@ -1,0 +1,33 @@
+.notFoundPage {
+  background-color: #eec373;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.notFoundTitle {
+  position: fixed;
+  margin-top: 12.5rem;
+  font-size: 3rem;
+  color: #532e1c;
+}
+
+.imageContainer {
+  margin-top: 17.5rem;
+}
+
+.redirectLink {
+  margin-top: 2rem;
+  font-size: 1.75rem;
+}
+
+.redirectLink a {
+  text-decoration: none;
+  color: #a35c00;
+}
+
+.redirectLink a:hover {
+  border-bottom: 1px solid #a35c00;
+}

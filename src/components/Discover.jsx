@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import classes from "./Discover.module.css";
 import ArtItem from "./ArtItem";
+import { Link } from "react-router-dom";
 
 function Discover() {
   const [list, setList] = useState(null);
@@ -29,11 +30,31 @@ function Discover() {
     };
   }, []);
 
-  // NEED nested routes for items!
-
   return (
-    <div className={classes.listPage}>
-      <div className={classes.listContainer}></div>
+    <div className={classes.discoverPage}>
+      <div className={classes.discoverTitle}>
+        <div className={classes.olTitle}></div>
+        <div className={classes.artistName}>{"Vincent Van Gogh"}</div>
+        <div className={classes.olTitle}></div>
+        <div className={classes.highlightsTitle}>
+          - &nbsp;highlights&nbsp; -
+        </div>
+      </div>
+      <div className={classes.discoverList}>
+        <div className={classes.backArrow}>{"<"}</div>
+        <ArtItem />
+        <div className={classes.nextArrow}>{">"}</div>
+      </div>
+      <div className={classes.discoverExplore}>
+        Explore{" "}
+        <Link to="/explore"> Vincent Van Gogh MET collection -{">"}</Link>
+      </div>
+      <div className={classes.copyright}>
+        <div className={classes.ol}></div>
+        <div className={classes.copyrightText}>
+          © 2022, Copyright by Q_PERIOR all rights reserved{" "}
+        </div>
+      </div>
     </div>
   );
 }

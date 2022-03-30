@@ -1,0 +1,89 @@
+.discoverPage {
+  background-color: #eec373;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.discoverTitle {
+  position: fixed;
+  margin-top: 10rem;
+  width: 30rem;
+  text-align: center;
+}
+.olTitle {
+  width: 30rem;
+  height: 0.25rem;
+  top: 12rem;
+  left: 5vw;
+  background-color: rgb(83, 46, 28);
+  opacity: 0.25;
+}
+.artistName {
+  padding: 0.75rem 0;
+  font-size: 2.25rem;
+  font-weight: 600;
+  letter-spacing: 1.25px;
+  color: #532e1c;
+}
+
+.highlightsTitle {
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  padding: 1.5rem 0;
+}
+
+.discoverList {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 3px solid blue;
+  width: 75vw;
+  height: 40vh;
+  margin-top: 25rem;
+}
+.discoverExplore {
+  position: fixed;
+  bottom: 7rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.75px;
+}
+
+.discoverExplore a {
+  text-decoration: none;
+  color: #a35c00;
+}
+
+.discoverExplore a:hover {
+  border-bottom: 2px solid #a35c00;
+}
+
+.copyright {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 2.5vh;
+  left: 5vw;
+}
+
+.ol {
+  position: fixed;
+  right: 5vw;
+  width: auto;
+  height: 0.125rem;
+  bottom: 5vh;
+  left: 5vw;
+  background-color: rgb(83, 46, 28);
+  opacity: 0.25;
+}
+
+.copyrightText {
+  color: #532e1c;
+}

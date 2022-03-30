@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import classes from "./Discover.module.css";
-import ArtItem from "../ArtItem/ArtItem";
+import ArtItem from "../ArtItemThumbnail/ArtItemThumbnail";
 import { Link } from "react-router-dom";
 import CopyRight from "../CopyRight/CopyRight";
 

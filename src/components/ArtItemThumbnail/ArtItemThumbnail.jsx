@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./ArtItem.module.css";
+import classes from "./ArtItemThumbnail.module.css";
 
 function ArtItem({ smallImg, title, date, artist, id }) {
   return (

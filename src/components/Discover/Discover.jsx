@@ -7,8 +7,6 @@ import CopyRight from "../CopyRight/CopyRight";
 
 function Discover() {
   const [list, setList] = useState([]);
-  // const [idStr, setIdStr] = useState("");
-  // const [artItem, setArtItem] = useState(null);
 
   useEffect(() => {
     let mounted = true;
@@ -22,7 +20,6 @@ function Discover() {
             let listos = [];
             response.data.objectIDs.map((el) => {
               listos.push(el);
-              // setIdStr(el.toString());
               return listos;
             });
             setList(listos);
@@ -38,17 +35,6 @@ function Discover() {
       mounted = false;
     };
   }, []);
-
-  // const getArtwork = (id) => {
-  //   axios
-  //     .get(
-  //       `https://collectionapi.metmuseum.org/public/collection/v1/objects/${id}`
-  //     )
-  //     .then((response) => {
-  //       setArtItem(response.data);
-  //       console.log(artItem);
-  //     });
-  // };
 
   return (
     <div className={classes.discoverPage}>

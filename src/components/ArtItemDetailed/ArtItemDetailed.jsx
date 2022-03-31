@@ -47,7 +47,7 @@ function ArtItemDetailed({
             </div>
             <div className={classes.creditLine}>
               <p>{"Credit Line"}</p>
-              <span>{name || "Gift or Mr. and Ms..."}</span>
+              <span>{creditLine || "Gift or Mr. and Ms..."}</span>
             </div>
             <div className={classes.displayBio}>
               {" "}

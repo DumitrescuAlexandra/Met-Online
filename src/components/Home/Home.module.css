@@ -50,3 +50,16 @@
   font-size: 3.5rem;
   font-weight: 700;
 }
+
+/* tabletscreen (landscape): 1024 x 768 */
+
+@media only screen and (min-width: 1024px) and (max-width: 1400px) {
+  .actualText p {
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+  }
+  .actualText a {
+    letter-spacing: 0.5px;
+    font-size: 2.25rem;
+  }
+}

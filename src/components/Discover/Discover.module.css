@@ -47,7 +47,7 @@
   /* overflow: scroll; */
   align-items: center;
   justify-content: center;
-  border: 3px solid blue;
+  /* border: 3px solid blue; */
   width: 75vw;
   height: 40vh;
   margin-top: 22.5rem;
@@ -67,4 +67,45 @@
 
 .discoverExplore a:hover {
   border-bottom: 2px solid #a35c00;
+}
+
+/* small laptop: 1440 x 768 */
+@media only screen and (min-width: 1440px) and (max-width: 1900px) {
+  .discoverList {
+    width: 60vw;
+    margin-top: 20rem;
+  }
+  .highlightsTitle {
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+  }
+  .artistName {
+    font-size: 2rem;
+  }
+  .discoverExplore {
+    bottom: 5rem;
+    font-size: 1.25rem;
+  }
+}
+
+/* tabletscreen (landscape): 1024 x 768 */
+
+@media only screen and (min-width: 1024px) and (max-width: 1400px) {
+  .artistName {
+    font-size: 2rem;
+  }
+
+  .highlightsTitle {
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+  }
+
+  .discoverList {
+    height: 40vh;
+    margin-top: 20rem;
+  }
+  .discoverExplore {
+    bottom: 5rem;
+    font-size: 1.25rem;
+  }
 }

@@ -45,3 +45,23 @@
 .navLinks a:last-child {
   margin-right: 3rem;
 }
+
+/* tabletscreen (landscape): 1024 x 768 */
+
+@media only screen and (min-width: 1024px) and (max-width: 1400px) {
+  .navigationBar {
+    height: 6rem;
+  }
+  .logo img {
+    width: 7.5rem;
+  }
+  .navLinks a {
+    margin-left: 2.5rem;
+  }
+  .activeStyle {
+    font-size: 1.5rem;
+  }
+  .inactiveStyle {
+    font-size: 1.15rem;
+  }
+}

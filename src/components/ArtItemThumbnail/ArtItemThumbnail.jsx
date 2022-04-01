@@ -39,7 +39,6 @@ function ArtItemThumbnail({ id }) {
       <Link to={`/discover/${id}`}>
         <div className={classes.image}>
           {/* <img src={artItem.primaryImageSmall} alt="" /> */}
-
           {<img src="/images/smokingSkull.PNG" alt="" />}
         </div>
         <div className={classes.caption}>

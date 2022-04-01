@@ -1,35 +1,16 @@
-/* Tablet screen (landscape): 1024 x 768  */
-
-@media only screen and (min-width: 1024px) and (max-width: 1900px) {
-  .artItem {
-    height: 15rem;
-    width: 12.5rem;
-    margin: 1.5rem 2rem;
-  }
-  .caption {
-    height: 4.5rem;
-  }
-  .title {
-    font-size: 1rem;
-  }
-  .artist {
-    font-size: 1rem;
-  }
-
-  .date {
-    font-size: 1rem;
-  }
-}
-
 /* Medium desktop: 1920 x 1080 */
 
 .artItem {
   position: relative;
   height: 20rem;
   width: 17.5rem;
-  border: 3px solid green;
+  /* border: 3px solid green; */
   margin: 1.5rem 2.5rem;
   overflow: hidden;
+}
+
+.artItem img {
+  width: 100%;
 }
 
 .caption {
@@ -48,7 +29,8 @@
 .title {
   font-family: "Lato", sans-serif;
   font-weight: 300;
-  font-size: 1.25rem;
+  font-size: 1rem;
+  text-align: center;
   font-style: italic;
   letter-spacing: 0.5px;
   color: #fff;
@@ -57,16 +39,60 @@
 .artist {
   font-family: "Lato", sans-serif;
   font-weight: 200;
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: #fff;
 }
 
 .date {
   font-family: "Lato", sans-serif;
-  font-size: 1.25rem;
+  font-size: 1rem;
   letter-spacing: 0.75px;
   font-weight: 100;
   color: #fff;
+}
+
+/* tabletscreen (landscape): 1024 x 768 */
+
+@media only screen and (min-width: 1024px) and (max-width: 1400px) {
+  .artItem {
+    height: 15rem;
+    width: 12.5rem;
+    margin: 1.5rem 2rem;
+  }
+  .caption {
+    height: 4.5rem;
+  }
+  .title {
+    font-size: 1rem;
+  }
+  .artist {
+    font-size: 1rem;
+  }
+  .date {
+    font-size: 1rem;
+  }
+}
+
+/* small laptop: 1440 x 768 */
+
+@media only screen and (min-width: 1440px) and (max-width: 1900px) {
+  .artItem {
+    height: 15rem;
+    width: 12.5rem;
+    margin: 1.5rem 2rem;
+  }
+  .caption {
+    height: 4.5rem;
+  }
+  .title {
+    font-size: 1rem;
+  }
+  .artist {
+    font-size: 1rem;
+  }
+  .date {
+    font-size: 1rem;
+  }
 }
 
 /* Large screen: 2560 x 1440 */

@@ -26,7 +26,7 @@
   margin-left: 7.5rem;
   height: 52.5vh;
   width: 75%;
-  border: 3px solid blue;
+  /* border: 3px solid blue; */
   overflow-x: hidden;
 }
 
@@ -35,4 +35,19 @@
   width: 10rem;
   border: 3px solid green;
   margin: 1.5rem 3.5rem;
+}
+
+/* small laptop: 1440 x 768 */
+
+@media only screen and (min-width: 1440px) and (max-width: 1900px) {
+  .exploreTitle {
+    margin-top: 10rem;
+  }
+  .exploreList {
+    margin-top: 16rem;
+    /* border: 3px solid blue; */
+  }
+  .dummyIttem {
+    margin: 1.5rem 2rem;
+  }
 }

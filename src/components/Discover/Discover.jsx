@@ -1,40 +1,40 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+// import React, { useState, useEffect } from "react";
+// import axios from "axios";
 import classes from "./Discover.module.css";
 import ArtItemThumbnail from "../ArtItemThumbnail/ArtItemThumbnail";
 import { Link } from "react-router-dom";
 import CopyRight from "../CopyRight/CopyRight";
 
-function Discover() {
-  const [list, setList] = useState([]);
+function Discover({ list }) {
+  // const [list, setList] = useState([]);
 
-  useEffect(() => {
-    let mounted = true;
-    const getHighlightItems = () => {
-      if (mounted) {
-        axios
-          .get(
-            "https://collectionapi.metmuseum.org/public/collection/v1/search?artistOrCulture=true&medium=Paintings&isHighlight=true&q=gogh"
-          )
-          .then((response) => {
-            let listos = [];
-            response.data.objectIDs.map((el) => {
-              listos.push(el);
-              return listos;
-            });
-            setList(listos);
-          });
+  // useEffect(() => {
+  //   let mounted = true;
+  //   const getHighlightItems = () => {
+  //     if (mounted) {
+  //       axios
+  //         .get(
+  //           "https://collectionapi.metmuseum.org/public/collection/v1/search?artistOrCulture=true&medium=Paintings&isHighlight=true&q=gogh"
+  //         )
+  //         .then((response) => {
+  //           let listos = [];
+  //           response.data.objectIDs.map((el) => {
+  //             listos.push(el);
+  //             return listos;
+  //           });
+  //           setList(listos);
+  //         });
 
-        console.log(list);
-      }
-    };
+  //       console.log(list);
+  //     }
+  //   };
 
-    getHighlightItems();
+  //   getHighlightItems();
 
-    return function cleanup() {
-      mounted = false;
-    };
-  }, []);
+  //   return function cleanup() {
+  //     mounted = false;
+  //   };
+  // }, []);
 
   return (
     <div className={classes.discoverPage}>

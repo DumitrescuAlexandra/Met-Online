@@ -1,40 +1,41 @@
-// import React, { useState, useEffect } from "react";
-// import axios from "axios";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import classes from "./Discover.module.css";
 import ArtItemThumbnail from "../ArtItemThumbnail/ArtItemThumbnail";
 import { Link } from "react-router-dom";
 import CopyRight from "../CopyRight/CopyRight";
 
-function Discover({ list }) {
-  // const [list, setList] = useState([]);
+function Discover() {
+  const [list, setList] = useState([]);
+  const [idStr, setIdStr] = useState("");
 
-  // useEffect(() => {
-  //   let mounted = true;
-  //   const getHighlightItems = () => {
-  //     if (mounted) {
-  //       axios
-  //         .get(
-  //           "https://collectionapi.metmuseum.org/public/collection/v1/search?artistOrCulture=true&medium=Paintings&isHighlight=true&q=gogh"
-  //         )
-  //         .then((response) => {
-  //           let listos = [];
-  //           response.data.objectIDs.map((el) => {
-  //             listos.push(el);
-  //             return listos;
-  //           });
-  //           setList(listos);
-  //         });
+  useEffect(() => {
+    let mounted = true;
+    const getHighlightItems = async () => {
+      if (mounted) {
+        await axios
+          .get(
+            "https://collectionapi.metmuseum.org/public/collection/v1/search?artistOrCulture=true&medium=Paintings&isHighlight=true&q=gogh"
+          )
+          .then((response) => {
+            let listos = [];
+            response.data.objectIDs.map((el) => {
+              listos.push(el);
+              setIdStr(el.toString());
+              return listos;
+            });
+            setList(listos);
+          });
 
-  //       console.log(list);
-  //     }
-  //   };
+        console.log(list);
+      }
+    };
+    getHighlightItems();
 
-  //   getHighlightItems();
-
-  //   return function cleanup() {
-  //     mounted = false;
-  //   };
-  // }, []);
+    return function cleanup() {
+      mounted = false;
+    };
+  }, []);
 
   return (
     <div className={classes.discoverPage}>
@@ -47,13 +48,9 @@ function Discover({ list }) {
         </div>
       </div>
       <div className={classes.discoverList}>
-        {list.map((item) => console.log(`Here's you id: ${item.toString()}`))}
+        {/* {list.map((item) => console.log(`Here's you id: ${idStr}`))} */}
         {list.map((item) => (
-          <ArtItemThumbnail
-            key={item}
-            id={item.toString()}
-            // getArtwork={getArtwork}
-          />
+          <ArtItemThumbnail key={item} id={item.toString()} />
         ))}
         <div className={classes.nextArrow}>{">"}</div>
       </div>

@@ -8,51 +8,46 @@ function ArtItemThumbnail({ id }) {
 
   const [artItem, setArtItem] = useState(null);
 
-  const getArtworkItem = useCallback(
-    (idStr) => {
-      axios
-        .get(
-          `https://collectionapi.metmuseum.org/public/collection/v1/objects/${idStr}`
-        )
-        .then((response) => {
-          setArtItem(response.data);
-          console.log(artItem);
-        });
-    },
-    [id]
-  );
-  // dsa
-
   useEffect(() => {
     let mounted = true;
-    if (mounted) {
-      getArtworkItem(id);
-    }
-
+    const getartwork = async () => {
+      if (mounted) {
+        await axios
+          .get(
+            `https://collectionapi.metmuseum.org/public/collection/v1/objects/${id}`
+          )
+          .then((response) => {
+            setArtItem(response.data);
+            console.log(artItem);
+          });
+      }
+    };
+    getartwork();
+    //ds
     return function cleanup() {
       mounted = false;
     };
-  }, [getArtworkItem, id]);
+  }, []);
 
   return (
     <div className={classes.artItem}>
       <Link to={`/discover/${id}`}>
         <div className={classes.image}>
-          {/* <img src={artItem.primaryImageSmall} alt="" /> */}
-          {<img src="/images/smokingSkull.PNG" alt="" />}
+          <img src={artItem.primaryImageSmall} alt="" />
+          {/* {<img src="/images/smokingSkull.PNG" alt="" />} */}
         </div>
         <div className={classes.caption}>
           <div className={classes.title}>
-            {/* {artItem.title} */}
-            {"The smoking skull"}
+            {artItem.title}
+            {/* {"The smoking skull"} */}
           </div>
           <div className={classes.artist}>
-            {/* {artItem.artistDisplayName} */}
-            {"Vincent Van Gogh"}
+            {artItem.artistDisplayName}
+            {/* {"Vincent Van Gogh"} */}
           </div>
           <div className={classes.date}>
-            {/* {artItem.objectDate} */}
-            {"25.dec.1888"}
+            {artItem.objectDate}
+            {/* {"25.dec.1888"} */}
           </div>
         </div>
       </Link>

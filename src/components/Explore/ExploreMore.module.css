@@ -30,12 +30,113 @@
   overflow-x: hidden;
 }
 
-.dummyIttem {
+/* .dummyIttem {
   height: 12.5rem;
   width: 10rem;
   border: 3px solid green;
   margin: 1.5rem 3.5rem;
+} */
+/*----------------------------------------------------------------- */
+/*--------------------------just for dummy------------------------- */
+
+/*----------------------------------------------------------------- */
+/* Medium desktop: 1920 x 1080 */
+.dummyIttem {
+  position: relative;
+  height: 20rem;
+  width: 17.5rem;
+  /* border: 3px solid green; */
+  margin: 1.5rem 2.5rem;
+  overflow: hidden;
 }
+.dummyIttem img {
+  width: 100%;
+}
+
+.caption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 0;
+  height: 6rem;
+  width: 100%;
+  opacity: 0.9;
+  background-color: #0f0f0f;
+}
+
+.title {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  text-align: center;
+  font-style: italic;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+
+.artist {
+  font-family: "Lato", sans-serif;
+  font-weight: 200;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.date {
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.75px;
+  font-weight: 100;
+  color: #fff;
+}
+
+/* tabletscreen (landscape): 1024 x 768 */
+
+@media only screen and (min-width: 1024px) and (max-width: 1400px) {
+  .dummyIttem {
+    height: 15rem;
+    width: 12.5rem;
+    margin: 1.5rem 2rem;
+  }
+  .caption {
+    height: 4.5rem;
+  }
+  .title {
+    font-size: 1rem;
+  }
+  .artist {
+    font-size: 1rem;
+  }
+  .date {
+    font-size: 1rem;
+  }
+}
+
+/* small laptop: 1440 x 768 */
+
+@media only screen and (min-width: 1440px) and (max-width: 1900px) {
+  .artItem {
+    height: 15rem;
+    width: 12.5rem;
+    margin: 1.5rem 2rem;
+  }
+  .caption {
+    height: 4.5rem;
+  }
+  .title {
+    font-size: 1rem;
+  }
+  .artist {
+    font-size: 1rem;
+  }
+  .date {
+    font-size: 1rem;
+  }
+}
+/*----------------------------------------------------------------- */
+/*--------------------------just for dummy------------------------- */
+/*----------------------------------------------------------------- */
 
 /* small laptop: 1440 x 768 */
 

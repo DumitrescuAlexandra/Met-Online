@@ -4,7 +4,6 @@
   position: relative;
   height: 20rem;
   width: 17.5rem;
-  /* border: 3px solid green; */
   margin: 1.5rem 2.5rem;
   overflow: hidden;
 }
@@ -80,9 +79,6 @@
     height: 15rem;
     width: 12.5rem;
     margin: 1.5rem 2rem;
-  }
-  .caption {
-    height: 4.5rem;
   }
   .title {
     font-size: 1rem;

@@ -7,7 +7,6 @@ import CopyRight from "../CopyRight/CopyRight";
 
 function Discover() {
   const [list, setList] = useState([]);
-  const [idStr, setIdStr] = useState("");
 
   useEffect(() => {
     let mounted = true;
@@ -18,16 +17,13 @@ function Discover() {
             "https://collectionapi.metmuseum.org/public/collection/v1/search?artistOrCulture=true&medium=Paintings&isHighlight=true&q=gogh"
           )
           .then((response) => {
-            let listos = [];
+            let theList = [];
             response.data.objectIDs.map((el) => {
-              listos.push(el);
-              setIdStr(el.toString());
-              return listos;
+              theList.push(el);
+              return theList;
             });
-            setList(listos);
+            setList(theList);
           });
-
-        console.log(list);
       }
     };
     getHighlightItems();

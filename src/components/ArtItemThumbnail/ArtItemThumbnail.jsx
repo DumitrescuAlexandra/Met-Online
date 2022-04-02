@@ -1,11 +1,9 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import classes from "./ArtItemThumbnail.module.css";
 
 function ArtItemThumbnail({ id }) {
-  console.log(id);
-
   const [artItem, setArtItem] = useState(null);
 
   useEffect(() => {
@@ -18,12 +16,10 @@ function ArtItemThumbnail({ id }) {
           )
           .then((response) => {
             setArtItem(response.data);
-            console.log(artItem);
           });
       }
     };
     getartwork();
-    //ds
     return function cleanup() {
       mounted = false;
     };
@@ -31,26 +27,20 @@ function ArtItemThumbnail({ id }) {
 
   return (
     <div className={classes.artItem}>
-      <Link to={`/discover/${id}`}>
-        <div className={classes.image}>
-          <img src={artItem.primaryImageSmall} alt="" />
-          {/* {<img src="/images/smokingSkull.PNG" alt="" />} */}
-        </div>
-        <div className={classes.caption}>
-          <div className={classes.title}>
-            {artItem.title}
-            {/* {"The smoking skull"} */}
+      {artItem ? (
+        <Link to={`/discover/${id}`}>
+          <div className={classes.image}>
+            <img src={artItem.primaryImageSmall} alt="" />
           </div>
-          <div className={classes.artist}>
-            {artItem.artistDisplayName}
-            {/* {"Vincent Van Gogh"} */}
+          <div className={classes.caption}>
+            <div className={classes.title}>{artItem.title}</div>
+            <div className={classes.artist}>{artItem.artistDisplayName}</div>
+            <div className={classes.date}>{artItem.objectDate}</div>
           </div>
-          <div className={classes.date}>
-            {artItem.objectDate}
-            {/* {"25.dec.1888"} */}
-          </div>
-        </div>
-      </Link>
+        </Link>
+      ) : (
+        <div className={classes.image}>...</div>
+      )}
     </div>
   );
 }

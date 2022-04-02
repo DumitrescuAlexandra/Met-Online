@@ -2,9 +2,9 @@
 .artItemModalBck {
   position: relative;
   top: 10rem;
-  left: 20vw;
+  left: 10vw;
   height: max(80vh);
-  width: min(60vw);
+  width: min(80vw);
   display: flex;
 }
 .closeImg {
@@ -17,20 +17,20 @@
 
 .artItemPage {
   position: absolute;
-  width: 100%;
-  height: fit-content;
+  width: 80vw;
+  height: 75vh;
   display: flex;
 }
 
 .artItemPic {
-  width: fit-content;
-  height: fit-content;
+  width: 75%;
+  height: 100%;
 }
 
 .artItemPic img {
   position: absolute;
-  width: 80vh;
-  height: 80vh;
+  width: 100%;
+  height: 100%;
 }
 
 .artItemDetails {

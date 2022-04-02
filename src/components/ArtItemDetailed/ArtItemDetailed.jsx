@@ -1,15 +1,18 @@
 import React from "react";
+import axios from "axios";
 import Modal from "react-modal/lib/components/Modal";
 import classes from "./ArtItemDetailed.module.css";
+import useHttp from "../Hooks/useHttp";
+import { useNavigate, useParams } from "react-router-dom";
 
-function ArtItemDetailed({
-  name,
-  creditLine,
-  displayBio,
-  medium,
-  department,
-  repository,
-}) {
+function ArtItemDetailed() {
+  const params = useParams();
+  const navigate = useNavigate();
+
+  const url = `https://collectionapi.metmuseum.org/public/collection/v1/objects/${params.artItemID}`;
+  console.log(params.artItemID);
+  const { artItem } = useHttp(axios.get(url));
+
   return (
     <div className={classes.artItemDetailedPage}>
       <Modal
@@ -33,44 +36,41 @@ function ArtItemDetailed({
           height="28px"
           width="28px"
           className={classes.closeImg}
+          onClick={() => navigate("/discover")}
         ></img>
 
         <div className={classes.artItemPage}>
           <img
-            src="/images/smokingSkull.PNG"
+            src={artItem.primaryImage}
             alt=""
             className={classes.artItemPic}
           />
           <div className={classes.artItemDetails}>
             <div className={classes.artItemitle}>
-              <p>{name || "Name of the painting"}</p>
+              <p>{artItem.title}</p>
             </div>
             <div className={classes.creditLine}>
               <p>{"Credit Line"}</p>
-              <span>{creditLine || "Gift or Mr. and Ms..."}</span>
+              <span>{artItem.creditLine}</span>
             </div>
             <div className={classes.displayBio}>
               {" "}
-              <p>{""}</p>
-              <span>
-                {displayBio || "Dutch, Zundert 1853–1890 Auvers-sur-Oise"}
-              </span>
+              <p>Display Bio</p>
+              <span>{artItem.artistDisplayBio}</span>
             </div>
             <div className={classes.medium}>
               <p>{"Medium"}</p>
-              <span>{medium || "Oil on canvas"}</span>
+              <span>{artItem.medium}</span>
             </div>
             <div className={classes.department}>
               {" "}
               <p>{"Department"}</p>
-              <span>{department || "European Paintings"}</span>
+              <span>{artItem.department}</span>
             </div>
             <div className={classes.repository}>
               {" "}
               <p>{"Repository"}</p>
-              <span>
-                {repository || "Metropolitan Museun of Art, New Yourk, NY"}
-              </span>
+              <span>{artItem.repository}</span>
             </div>
           </div>
         </div>

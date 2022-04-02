@@ -1,25 +1,20 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 import classes from "./ArtItemThumbnail.module.css";
-import useGetArtwork from "../Hooks/useGetArtwork";
+import LoadingSpinner from "../Loading Spinner/LoadingSpinner";
+import useHttp from "../Hooks/useHttp";
 
 function ArtItemThumbnail({ id }) {
   const url = `https://collectionapi.metmuseum.org/public/collection/v1/objects/${id}`;
-  const { artItem, getArtwork } = useGetArtwork(url);
 
-  useEffect(() => {
-    let mounted = true;
-    if (mounted) {
-      getArtwork(url);
-    }
-    return function cleanup() {
-      mounted = false;
-    };
-  });
+  const { artItem, isLoading } = useHttp(axios.get(url));
 
   return (
     <div className={classes.artItem}>
-      {artItem ? (
+      {isLoading ? (
+        <LoadingSpinner />
+      ) : (
         <Link to={`/discover/${id}`}>
           <div className={classes.image}>
             <img src={artItem.primaryImageSmall} alt="" />
@@ -30,8 +25,6 @@ function ArtItemThumbnail({ id }) {
             <div className={classes.date}>{artItem.objectDate}</div>
           </div>
         </Link>
-      ) : (
-        <div className={classes.image}>...</div>
       )}
     </div>
   );

@@ -1,25 +1,14 @@
-import React, { useEffect } from "react";
+import React from "react";
+import axios from "axios";
 import ArtItemThumbnail from "../ArtItemThumbnail/ArtItemThumbnail";
 import CopyRight from "../CopyRight/CopyRight";
 import classes from "./ExploreMore.module.css";
-import useGetCollection from "../Hooks/useGetCollection";
+import useHttp from "../Hooks/useHttp";
 
 function ExploreMore({ id }) {
-  const { list, getCollection } = useGetCollection();
-
   const url =
     "https://collectionapi.metmuseum.org/public/collection/v1/search?artistOrCulture=true&medium=Paintings&q=gogh";
-
-  useEffect(() => {
-    let mounted = true;
-
-    if (mounted) {
-      getCollection(url);
-    }
-    return function cleanup() {
-      mounted = false;
-    };
-  });
+  const { list } = useHttp(axios.get(url));
 
   return (
     <div className={classes.explorePage}>

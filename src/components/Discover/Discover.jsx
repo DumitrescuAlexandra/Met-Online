@@ -1,26 +1,15 @@
-import React, { useEffect } from "react";
+import React from "react";
+import axios from "axios";
 import classes from "./Discover.module.css";
 import ArtItemThumbnail from "../ArtItemThumbnail/ArtItemThumbnail";
 import { Link } from "react-router-dom";
 import CopyRight from "../CopyRight/CopyRight";
-import useGetCollection from "../Hooks/useGetCollection";
+import useHttp from "../Hooks/useHttp";
 
 function Discover() {
-  const { list, getCollection } = useGetCollection();
-
   const url =
     "https://collectionapi.metmuseum.org/public/collection/v1/search?artistOrCulture=true&medium=Paintings&isHighlight=true&q=gogh";
-
-  useEffect(() => {
-    let mounted = true;
-
-    if (mounted) {
-      getCollection(url);
-    }
-    return function cleanup() {
-      mounted = false;
-    };
-  });
+  const { list } = useHttp(axios.get(url));
 
   return (
     <div className={classes.discoverPage}>

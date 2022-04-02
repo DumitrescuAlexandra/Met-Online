@@ -1,37 +1,26 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useEffect } from "react";
 import classes from "./Discover.module.css";
 import ArtItemThumbnail from "../ArtItemThumbnail/ArtItemThumbnail";
 import { Link } from "react-router-dom";
 import CopyRight from "../CopyRight/CopyRight";
+import useGetCollection from "../Hooks/useGetCollection";
 
 function Discover() {
-  const [list, setList] = useState([]);
+  const { list, getCollection } = useGetCollection();
+
+  const url =
+    "https://collectionapi.metmuseum.org/public/collection/v1/search?artistOrCulture=true&medium=Paintings&isHighlight=true&q=gogh";
 
   useEffect(() => {
     let mounted = true;
-    const getHighlightItems = async () => {
-      if (mounted) {
-        await axios
-          .get(
-            "https://collectionapi.metmuseum.org/public/collection/v1/search?artistOrCulture=true&medium=Paintings&isHighlight=true&q=gogh"
-          )
-          .then((response) => {
-            let theList = [];
-            response.data.objectIDs.map((el) => {
-              theList.push(el);
-              return theList;
-            });
-            setList(theList);
-          });
-      }
-    };
-    getHighlightItems();
 
+    if (mounted) {
+      getCollection(url);
+    }
     return function cleanup() {
       mounted = false;
     };
-  }, []);
+  });
 
   return (
     <div className={classes.discoverPage}>
@@ -44,7 +33,8 @@ function Discover() {
         </div>
       </div>
       <div className={classes.discoverList}>
-        {/* {list.map((item) => console.log(`Here's you id: ${idStr}`))} */}
+        <div className={classes.backArrow}>{"<"}</div>
+
         {list.map((item) => (
           <ArtItemThumbnail key={item} id={item.toString()} />
         ))}

@@ -1,29 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
 import classes from "./ArtItemThumbnail.module.css";
+import useGetArtwork from "../Hooks/useGetArtwork";
 
 function ArtItemThumbnail({ id }) {
-  const [artItem, setArtItem] = useState(null);
+  const url = `https://collectionapi.metmuseum.org/public/collection/v1/objects/${id}`;
+  const { artItem, getArtwork } = useGetArtwork(url);
 
   useEffect(() => {
     let mounted = true;
-    const getartwork = async () => {
-      if (mounted) {
-        await axios
-          .get(
-            `https://collectionapi.metmuseum.org/public/collection/v1/objects/${id}`
-          )
-          .then((response) => {
-            setArtItem(response.data);
-          });
-      }
-    };
-    getartwork();
+    if (mounted) {
+      getArtwork(url);
+    }
     return function cleanup() {
       mounted = false;
     };
-  }, []);
+  });
 
   return (
     <div className={classes.artItem}>

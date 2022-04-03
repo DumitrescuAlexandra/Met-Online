@@ -1,14 +1,14 @@
 ::-webkit-scrollbar {
-  width: 0.1rem;
+  width: 0.15rem;
   height: 0.1rem;
 }
 ::-webkit-scrollbar-track {
   background: #532e1c;
+  width: 0.1rem;
 }
 ::-webkit-scrollbar-thumb {
-  background: #a35c00;
-  width: 0.25rem;
-  height: 0.25rem;
+  background: #016fff;
+  width: 0.15rem;
 }
 
 /* Medium desktop: 1920 x 1080 */

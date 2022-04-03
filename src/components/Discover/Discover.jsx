@@ -5,11 +5,12 @@ import ArtItemThumbnail from "../ArtItemThumbnail/ArtItemThumbnail";
 import { Link } from "react-router-dom";
 import CopyRight from "../CopyRight/CopyRight";
 import useHttp from "../Hooks/useHttp";
+import LoadingSpinner from "../Loading Spinner/LoadingSpinner";
 
 function Discover() {
   const url =
     "https://collectionapi.metmuseum.org/public/collection/v1/search?artistOrCulture=true&medium=Paintings&isHighlight=true&q=gogh";
-  const { list } = useHttp(axios.get(url));
+  const { list, isLoading } = useHttp(axios.get(url));
 
   return (
     <div className={classes.discoverPage}>
@@ -22,12 +23,13 @@ function Discover() {
         </div>
       </div>
       <div className={classes.discoverList}>
-        <div className={classes.backArrow}>{"<"}</div>
-
-        {list.map((item) => (
-          <ArtItemThumbnail key={item} id={item.toString()} />
-        ))}
-        <div className={classes.nextArrow}>{">"}</div>
+        {isLoading ? (
+          <LoadingSpinner />
+        ) : (
+          list.map((item) => (
+            <ArtItemThumbnail key={item} id={item.toString()} />
+          ))
+        )}
       </div>
       <div className={classes.discoverExplore}>
         Explore{" "}

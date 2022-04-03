@@ -1,3 +1,16 @@
+::-webkit-scrollbar {
+  width: 0.1rem;
+  height: 0.1rem;
+}
+::-webkit-scrollbar-track {
+  background: #532e1c;
+}
+::-webkit-scrollbar-thumb {
+  background: #a35c00;
+  width: 0.25rem;
+  height: 0.25rem;
+}
+
 /* Medium desktop: 1920 x 1080 */
 
 .discoverPage {
@@ -42,12 +55,11 @@
 .discoverList {
   position: fixed;
   display: flex;
-  flex-wrap: wrap;
-  overflow: hidden;
-  /* overflow: scroll; */
+  flex-wrap: nowrap;
+  overflow-y: hidden;
+  overflow-x: scroll;
   align-items: center;
   justify-content: center;
-  /* border: 3px solid blue; */
   width: 75vw;
   height: 40vh;
   margin-top: 22.5rem;
@@ -107,5 +119,26 @@
   .discoverExplore {
     bottom: 5rem;
     font-size: 1.25rem;
+  }
+}
+
+/* Large screen: 2560 x 1440 */
+@media only screen and (min-width: 2560px) and (max-width: 3500px) {
+  .artistName {
+    font-size: 2.75rem;
+  }
+
+  .highlightsTitle {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+
+  .discoverList {
+    height: 40vh;
+    margin-top: 25rem;
+  }
+  .discoverExplore {
+    bottom: 15rem;
+    font-size: 2rem;
   }
 }

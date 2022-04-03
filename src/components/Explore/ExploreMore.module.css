@@ -37,9 +37,31 @@
   }
   .exploreList {
     margin-top: 16rem;
-    /* border: 3px solid blue; */
   }
-  .dummyIttem {
-    margin: 1.5rem 2rem;
+}
+
+/* tabletscreen (landscape): 1024 x 768 */
+
+@media only screen and (min-width: 1024px) and (max-width: 1400px) {
+  .exploreTitle {
+    margin-top: 7.5rem;
+  }
+  .exploreList {
+    margin-top: 14rem;
+    margin-left: 5rem;
+  }
+}
+
+/* Large screen: 2560 x 1440 */
+@media only screen and (min-width: 2560px) and (max-width: 3500px) {
+  .exploreTitle {
+    margin-top: 12.5rem;
+    font-size: 3rem;
+  }
+  .exploreList {
+    margin-top: 22.5rem;
+    margin-left: 5rem;
+    height: 55vh;
+    width: 75%;
   }
 }

@@ -14,8 +14,8 @@ const useHttp = (request) => {
       });
     }
     return () => {
-      mounted = false;
       setIsLoading(false);
+      mounted = false;
     };
   });
 

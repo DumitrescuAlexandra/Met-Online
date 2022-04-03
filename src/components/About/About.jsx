@@ -39,7 +39,8 @@ function About() {
             <p>
               We proudly present you <b>“The MET Online” </b>project - the
               online version of one of the largest museums in the world. Each
-              week we will bring another artist’s masterpieces in th spotlight!
+              week we will bring another artist’s masterpieces into the
+              spotlight!
             </p>
           </div>
           <div className={classes.aboutDiscover}>

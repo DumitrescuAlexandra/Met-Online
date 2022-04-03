@@ -103,9 +103,6 @@
   .sectionLeft {
     margin-left: 10rem;
     margin-top: 12.5rem;
-    position: relative;
-    width: 30vw;
-    height: 45vh;
   }
   .sectionRight {
     width: 40vw;
@@ -117,16 +114,12 @@
     font-size: 2.5rem;
   }
   .aboutText {
-    margin-top: 2rem;
     width: 37.5vw;
   }
   .aboutText p {
     font-size: 1.1rem;
-    font-family: "Lato", sans-serif;
-    font-weight: 300;
   }
   .aboutDiscover {
-    margin-top: 3rem;
     font-size: 1.5rem;
   }
 }
@@ -145,21 +138,12 @@
   .imgContainerBg {
     top: 2rem;
     left: -3rem;
-    border-radius: 0.5rem;
-    background-color: #846445;
     width: 85%;
     height: 42.5vh;
   }
 
   .imgContainer {
     width: 80%;
-    height: 50vh;
-  }
-
-  .imgContainer img {
-    width: 100%;
-    height: auto;
-    border-radius: 0.5rem;
   }
 
   .sectionRight {
@@ -167,21 +151,62 @@
   }
   .aboutTitle {
     margin-top: 6rem;
-    padding-top: 3rem;
   }
   .aboutTitle p {
     font-size: 2.25rem;
   }
   .aboutText {
-    margin-top: 2rem;
     width: 40vw;
   }
   .aboutText p {
     font-size: 1.1rem;
   }
-
   .aboutDiscover {
     margin-top: 2rem;
     font-size: 1.35rem;
+  }
+}
+
+/* Large screen: 2560 x 1440 */
+@media only screen and (min-width: 2560px) and (max-width: 3500px) {
+  .upper {
+    margin-left: 12rem;
+    width: 75vw;
+  }
+  .sectionLeft {
+    margin-left: 15rem;
+    margin-top: 25rem;
+  }
+
+  .imgContainerBg {
+    top: 2rem;
+    left: -6rem;
+    width: 75%;
+    height: 50vh;
+  }
+
+  .imgContainer {
+    width: 75%;
+  }
+
+  .sectionRight {
+    width: 35vw;
+  }
+  .aboutTitle {
+    margin-top: 20rem;
+  }
+  .aboutTitle p {
+    font-size: 3rem;
+  }
+  .aboutText {
+    margin-top: 5rem;
+    width: 27.55vw;
+  }
+  .aboutText p {
+    font-size: 1.5rem;
+  }
+  .aboutDiscover {
+    margin-top: 5rem;
+    font-size: 2rem;
   }
 }

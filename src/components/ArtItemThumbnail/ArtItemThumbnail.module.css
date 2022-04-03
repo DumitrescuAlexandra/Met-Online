@@ -28,7 +28,7 @@
 .title {
   font-family: "Lato", sans-serif;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.15rem;
   text-align: center;
   font-style: italic;
   letter-spacing: 0.5px;
@@ -38,57 +38,79 @@
 .artist {
   font-family: "Lato", sans-serif;
   font-weight: 200;
-  font-size: 1rem;
+  font-size: 1.15rem;
   color: #fff;
 }
 
 .date {
   font-family: "Lato", sans-serif;
-  font-size: 1rem;
+  font-size: 1.15rem;
   letter-spacing: 0.75px;
   font-weight: 100;
   color: #fff;
-}
-
-/* tabletscreen (landscape): 1024 x 768 */
-
-@media only screen and (min-width: 1024px) and (max-width: 1400px) {
-  .artItem {
-    height: 15rem;
-    width: 12.5rem;
-    margin: 1.5rem 2rem;
-  }
-  .caption {
-    height: 4.5rem;
-  }
-  .title {
-    font-size: 1rem;
-  }
-  .artist {
-    font-size: 1rem;
-  }
-  .date {
-    font-size: 1rem;
-  }
 }
 
 /* small laptop: 1440 x 768 */
 
 @media only screen and (min-width: 1440px) and (max-width: 1900px) {
   .artItem {
-    height: 15rem;
+    height: 14rem;
     width: 12.5rem;
-    margin: 1.5rem 2rem;
+    margin: 1rem 0.5rem;
+  }
+  .caption {
+    height: 4rem;
   }
   .title {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .artist {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .date {
-    font-size: 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* tabletscreen (landscape): 1024 x 768 */
+
+@media only screen and (min-width: 1024px) and (max-width: 1400px) {
+  .artItem {
+    height: 12.5rem;
+    width: 12.5rem;
+    margin: 1rem 0.5rem;
+  }
+  .caption {
+    height: 4rem;
+  }
+  .title {
+    font-size: 0.75rem;
+  }
+  .artist {
+    font-size: 0.75rem;
+  }
+  .date {
+    font-size: 0.75rem;
   }
 }
 
 /* Large screen: 2560 x 1440 */
+@media only screen and (min-width: 2560px) and (max-width: 3500px) {
+  .artItem {
+    height: 22.5rem;
+    width: 22.5rem;
+    margin: 1rem 2.5rem;
+  }
+  .caption {
+    height: 6.5rem;
+  }
+  .title {
+    font-size: 1.25rem;
+  }
+  .artist {
+    font-size: 1.25rem;
+  }
+  .date {
+    font-size: 1.25rem;
+  }
+}

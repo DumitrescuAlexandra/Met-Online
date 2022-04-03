@@ -10,7 +10,6 @@ function ArtItemDetailed() {
   const navigate = useNavigate();
 
   const url = `https://collectionapi.metmuseum.org/public/collection/v1/objects/${params.artItemID}`;
-  console.log(params.artItemID);
   const { artItem } = useHttp(axios.get(url));
 
   return (

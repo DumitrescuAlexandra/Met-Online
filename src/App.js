@@ -1,7 +1,6 @@
 import React from "react";
 import { Route, Routes, Navigate } from "react-router-dom";
 import classes from "./App.module.css";
-// import { AppContext } from "./components/Context/context";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Discover from "./components/Discover/Discover";
@@ -18,13 +17,11 @@ function App() {
         <Route path="/" element={<Navigate replace to="/home" />} />
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
-        {/* <AppContext.Provider> */}
         <Route path="/discover" element={<Discover />} />
         <Route path="/discover/id" element={<ArtItemDetailed />} />
         <Route path="/discover/:artItemID" element={<ArtItemDetailed />} />
         <Route path="/explore" element={<ExploreMore />} />
         <Route path="/explore/:artItemID" element={<ArtItemDetailed />} />
-        {/* </AppContext.Provider> */}
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

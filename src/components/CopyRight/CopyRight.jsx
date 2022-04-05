@@ -6,7 +6,7 @@ function CopyRight() {
     <div className={classes.copyright}>
       <div className={classes.ol}></div>
       <div className={classes.copyrightText}>
-        © 2022, Copyright by Q_PERIOR all rights reserved{" "}
+        © 2022, Copyright by Alexandra D. all rights reserved{" "}
       </div>
     </div>
   );
